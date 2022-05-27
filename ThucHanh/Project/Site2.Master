@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="Project.Site2" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <asp:PlaceHolder ID="tieude" runat="server"></asp:PlaceHolder>
+    </title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HaUI-FICT</h1>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-inner">
+                <asp:PlaceHolder ID="Noidung" runat="server"></asp:PlaceHolder>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <h2>About Me</h2>
+
+                <img class="img-resize" src="b11.jpg" />
+                <h2>Danh mục</h2>
+                <ul>
+                    <li><a href="#">Công nghệ thông tin</a></li>
+                    <li><a href="#">Khoa học máy tính</a></li>
+                    <li><a href="#">Kĩ thuật phần mềm</a></li>
+                    <li><a href="#">hệ thống thông t</a></li>
+                     
+                </ul>
+                <h2>Lưu trữ</h2>
+                <ul>
+                    <li><a href="#">Nội dung 1</a></li>
+                    <li><a href="#">Nội dung 2</a></li>
+               
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Fictional Company</p>
+        </div>
+    </div>
+</body>
+</html>
+
+

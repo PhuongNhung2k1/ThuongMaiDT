@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Banhang.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <asp:ContentPlaceHolder ID="tieude" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <style type="text/css">
+        th, td{
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" action="ShoppingCart.aspx">
+    <div class="container">
+        <div class="header">
+            <h1>Trần Tiến Đạt</h1>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-inner">
+                <asp:ContentPlaceHolder ID="noidung" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <h2>About Me</h2>
+
+                <img class="img-resize" src="Images/b11.jpg" />
+                <h2>Danh mục</h2>
+               
+                <ul>
+                    <li>
+                        <a href="ListPro.aspx">Danh sách tất cả sản phẩm</a>
+                    </li>
+                    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource12">
+                        
+                        <ItemTemplate>
+                            <li>
+                            <a href='ListProductByCategory.aspx?Categoryid=<%# Eval("Categoryid") %>'><%# Eval("CategoryName") %></a>
+                                </li>
+                        </ItemTemplate>
+                            
+                    </asp:Repeater>
+                     
+                    <asp:SqlDataSource ID="SqlDataSource12" runat="server" ConnectionString="<%$ ConnectionStrings:db_banhangConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+                     
+                </ul>
+                <h2>Lưu trữ</h2>
+                <ul>
+                    <li><a href="#">Nội dung 1</a></li>
+                    <li><a href="#">Nội dung 2</a></li>
+               
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy;</p>
+        </div>
+    </div>
+    </form>
+        
+</body>
+</html>
+
+

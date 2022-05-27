@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Ot_thi2.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phạm Thị Phương Nhung</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+      <form id="form1" runat="server">
+    <div class="container">
+        <div class="header">
+            <h1>Phạm Thị Phương Nhung</h1>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-inner">
+                <asp:ContentPlaceHolder ID="NoiDung" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <h2>About Me</h2>
+
+                <img class="img-resize" src="/Images/tho.jpg" />
+                <h2>Danh mục</h2>
+                <ul>
+                      <li><a href="DSNV.aspx">Danh sách tát cả nhân viên</a></li>
+                    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                       <ItemTemplate>
+                           <li>
+                             <a href='ListByDepart.aspx?deptid=<%#Eval("deptid") %>'><%# Eval("deptname") %></a>
+                           </li>
+                       </ItemTemplate>
+                    </asp:Repeater> 
+                          <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                              ConnectionString="<%$ ConnectionStrings:mydataConnectionString %>" 
+                              SelectCommand="SELECT * FROM [tblDept]"></asp:SqlDataSource>
+                </ul>
+                <h2>Lưu trữ</h2>
+                <ul>
+                    <li><a href="#">Nội dung 1</a></li>
+                    <li><a href="#">Nội dung 2</a></li>
+               
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Kiểm tra 2</p>
+        </div>
+    </div>
+      </form>
+</body>
+</html>

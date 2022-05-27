@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project_13_11.Site1" %>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Project Sản phẩm</title>
+    <link rel="stylesheet" href="Style.css" />
+    <style type="text/css">
+        th, td{
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+      <form id="form1" runat="server" action="ShoppingCart.aspx">
+    <div class="container">
+        <div class="header">
+            <h1>Phạm Thị Phương Nhung</h1>
+          
+        </div>
+        <div class="content">
+            <div class="content-inner">
+            
+                <asp:ContentPlaceHolder ID="NoiDung" runat="server">
+                       
+                </asp:ContentPlaceHolder>          
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <h2>About Me</h2>
+
+                <img class="img-resize" src="Images/hoa (3).jpg" />
+                <h2>Danh mục</h2>
+                
+                    <ul>
+                <li><a href="ListProduct.aspx">Xem danh sách tất cả sản phẩm</a></li>
+                <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                        <ItemTemplate>
+                           <li>                              
+                               <a href= 'ListtProductByClass.aspx?Categoryid=<%# Eval("Categoryid") %>'><%# Eval("CategoryName") %> </a>
+                           </li>
+                        </ItemTemplate>
+                </asp:Repeater>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:ECartDB2ConnectionString %>" 
+                        SelectCommand="SELECT * FROM [Category]">
+                </asp:SqlDataSource>    
+             </ul>
+              
+                <h2>Lưu trữ</h2>
+                <ul>
+                    <li><a href="#">Nội dung 1</a></li>
+                    <li><a href="#">Nội dung 2</a></li>
+               
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Phạm Thị Phương Nhung - HTTT02 - K14</p>
+        </div>
+    </div>
+       </form>
+</body>
+</html>
+
+

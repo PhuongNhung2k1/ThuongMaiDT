@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Project.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+        </title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1> Hello world</h1>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+           <hr />
+            <footer> 
+                Phạm Phương Nhung, 2019602987-K14
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

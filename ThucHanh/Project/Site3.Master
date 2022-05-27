@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="Project.Site3" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <asp:ContentPlaceHolder ID="tieude" runat="server"></asp:ContentPlaceHolder>
+        
+    </title>
+    <style>
+        small{
+            display:block;
+            height:40px;
+            width:200px;
+            line-height:40px;
+            background-color:lightblue;
+            border:solid 1px;
+            font-size:18px;
+            text-align:center;
+            border-radius:20px;
+            text-decoration:none;
+        }
+    </style>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <div class="header">
+            <h2>Phạm Thị Phương Nhung, 2019602987</h2>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-inner">
+                <asp:ContentPlaceHolder ID="noidung" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <h2>About Me</h2>
+
+                <img class="img-resize" src="Image/b11.jpg" />
+                <h2>Danh mục</h2>
+                <ul>
+                    <li><a href="TestMaster3.aspx">Danh sách tất cả các lớp</a> </li>
+                    <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                        <ItemTemplate>
+                            <li>
+                                <a href='ListStudentByClass.aspx?malop=<%# Eval("malop") %>'><%# Eval("tenlop") %> </a>
+                            </li>
+                           
+                        </ItemTemplate>
+                    </asp:Repeater>
+                   
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:truonghocdb1ConnectionString %>" 
+                        SelectCommand="SELECT * FROM [lophoc]"></asp:SqlDataSource>
+                </ul>
+                 <h2><a href="AddStudentV3.aspx">Thêm sinh viên </a></h2>
+                <h2><a href="SuaSinhVien.aspx">Sửa thông tin sinh viên </a></h2>
+                <h2>Lưu trữ</h2>
+                <ul>
+                    <li><a href="#">Nội dung 1</a></li>
+                    <li><a href="#">Nội dung 2</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Phạm Thị Phương Nhung - HTTT02 -K14</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+

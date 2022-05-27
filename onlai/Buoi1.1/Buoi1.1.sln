@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buoi1.1", "Buoi1.1.csproj", "{3D20856F-2618-4FBB-95A8-89AC33D19D30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "buoi2", "..\buoi2\buoi2.csproj", "{ECCD32DD-6BBB-448A-85B3-B71CE2277FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thuchanh2", "..\thuchanh2\thuchanh2.csproj", "{CCB382A1-9D24-4176-8AC3-1FA28AF5346A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D20856F-2618-4FBB-95A8-89AC33D19D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D20856F-2618-4FBB-95A8-89AC33D19D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D20856F-2618-4FBB-95A8-89AC33D19D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D20856F-2618-4FBB-95A8-89AC33D19D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECCD32DD-6BBB-448A-85B3-B71CE2277FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCD32DD-6BBB-448A-85B3-B71CE2277FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCD32DD-6BBB-448A-85B3-B71CE2277FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCD32DD-6BBB-448A-85B3-B71CE2277FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB382A1-9D24-4176-8AC3-1FA28AF5346A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB382A1-9D24-4176-8AC3-1FA28AF5346A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB382A1-9D24-4176-8AC3-1FA28AF5346A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB382A1-9D24-4176-8AC3-1FA28AF5346A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A29CA77-E28A-402A-893C-57AD65B4A624}
+	EndGlobalSection
+EndGlobal

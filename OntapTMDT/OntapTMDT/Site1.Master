@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="OntapTMDT.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="NoiDung" runat="server">
+
+            </asp:ContentPlaceHolder>
+            <a href="DanhSach.aspx">Xem danh sách</a>
+            <a href="ThemSV.aspx">Thêm sinh viên</a>
+            <a href="SuaSV.aspx">Sửa sinh viên</a>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="PhamThiPhuongNhung_2019602987.Site1" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Demo</title>
+    <asp:ContentPlaceHolder ID="kiemtra1" runat="server"></asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="StyleSheet.css" />
+</head>
+<body>
+
+    <form id="form1" runat="server">
+
+    <div class="container">
+        <div class="header">
+            <h2>Phạm Thị Phương Nhung , 2019602987</h2>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Porfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="content-inner">
+                <asp:ContentPlaceHolder ID="noidung" runat="server"></asp:ContentPlaceHolder>
+                 <a href="#" class="button">Đọc tiếp</a>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-inner">
+                <h2>About Me</h2>
+
+                <img class="img-resize" src="b11.jpg" />
+                <h2>Danh mục</h2>
+                <ul>
+                     <li>   <a href="List.aspx">Danh sách tất cả sản phẩm</a></li>
+                     
+                   <%-- <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+
+                        <ItemTemplate>
+                       
+                            <li>
+                                <a href='List.aspx?trackid= <%# Eval("trackid") %>'><%# Eval("name") %> </a>
+                            </li>
+                           
+                        </ItemTemplate>
+                    </asp:Repeater>--%>
+                        
+                </ul>
+                <h2>Lưu trữ</h2>
+                <ul>
+                    <li><a href="#">Nội dung 1</a></li>
+                    <li><a href="#">Nội dung 2</a></li>
+               
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; Phạm Thị Phương Nhung , 2019602987 HTTT02 - K14</p>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
